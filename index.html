@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TheNewsHive</title>
+<script src="https://kit.fontawesome.com/46ac277147.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="icon.png">
+<script src="script.js"></script> 
+</head>
+
+<body>
+    <header>
+            <h1>TheNewsHive</h1>
+    </header>
+
+    <nav class ="navbar">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">NEWS</a></li>
+            <li><a href="">WORLD</a></li>
+            <li><a href="">BUSINESS</a></li>
+            <li><a href="">POLTIICS</a></li>
+            <li><a href="">ENTERTAINMENT</a></li>
+            <div class="dropdown">
+                <button class="dropbtn" >SPORTS 
+                  <i class="fa fa-caret-down"></i>
+                  <i class="arrow down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="">NEWS</a>
+                  <a href="">WORLD</a>
+                  <a href="">BUSINESS</a>
+                  <a href="">POLTIICS</a>
+                  <a href="">ENTERTAINMENT</a>
+                  <a href="">SPORTS</a>
+                </div>
+              </div>
+            </div>
+        </ul>
+    </nav>
+<div class = "breakingnews">
+    <i class="fa-solid fa-bolt"></i>
+    <b>Breaking News </b> 
+    <span class="date">
+        <i class="fa-solid fa-cloud-moon-rain"></i>&nbsp;
+        <i class="fa-solid fa-calendar-days"></i>&nbsp;
+        May 18, 2024
+    </span>
+</div>
+<main>
+    <section class="featured-articles" id="featarticle">
+    </section>
+    <aside class="sidebar">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('latest')">Latest</button>
+            <button class="tab" onclick="showTab('popular')">Popular</button>
+        </div>
+        <div id="latest" class="tab-content active">
+            <ul id = "latarticle">
+
+            </ul>
+        </div>
+        <div id="popular" class="tab-content">
+            <ul>
+                <li>
+                    <img src="1.jpg" alt="Popular Image 1">
+                    <div>
+                        Popular article 1
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 20, 2022</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="2.jpg" alt="Popular Image 2">
+                    <div>
+                        Popular article 2
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 19, 2022</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="3.jpg" alt="Popular Image 3">
+                    <div>
+                        Popular article 3
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 18, 2022</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="4.jpg" alt="Popular Image 4">
+                    <div>
+                        Popular article 4
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 17, 2022</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>    
+</main>
+
+<template id="featuredtemplate">
+    <article>
+        <img id = "newsimage" src="image.jpg" alt="Article Image">
+        <div class="article-info">
+            <div class="tags">
+                <span class="tag">Featured</span>
+                <span class="tag" id = "newstag">tag</span>
+            </div>
+            <h2 id = "newsheadline">news headline </h2>
+            <p id = "newscontent">Theme...</p>
+            <div class="date-container">
+                <span><i class="fa-regular fa-calendar"></i></span>
+                <span>&nbsp;</span> 
+                <span id="newsdate" class="date">Date</span>
+            </div>                      
+        </div>
+    </article>
+</template>
+
+<template id="latesttemplate">
+    <li>
+        <img id="latestimage" src="latesimage.jpg" alt="Latest Image">
+        <div>
+            <div id="latestheadline">headline</div>
+            <div class="date-container">
+                <span><i class="fa-regular fa-calendar"></i></span>
+                <span>&nbsp;</span> 
+                <span id="latestdate" class="date">Date</span>
+            </div>
+        </div>
+    </li>
+</template>
+ 
+  
+<script>    
+    function showTab(tabName) {
+        var i;
+        var x = document.getElementsByClassName("tab-content");
+        var tabs = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("active");
+        }
+        for (i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+</script>
+</body>
+
+</html>
+
