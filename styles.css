@@ -134,7 +134,7 @@ article img {
 
 .tag {
     display: inline-block;
-    background: grey;
+    background: black;
     color: white;
     padding: 2px 8px;
     border-radius: 3px;
@@ -177,11 +177,13 @@ article:nth-child(2) {
 article:nth-child(3) {
     grid-column: 3 / 4; 
     grid-row: 1 / 2; 
+    height: 36vh;
 }
 
 article:nth-child(4) {
     grid-column: 3 / 4; 
     grid-row: 2 / 3; 
+    height: 36vh;
 }
 
 
@@ -212,16 +214,21 @@ article:nth-child(4) {
 
 .tab-content {
     display: none;
-    padding: 10px 0;
 }
 
 .tab-content.active {
     display: block;
 }
 
+.scroll-container {
+    max-height: 560px;
+    overflow-y: auto;
+}
+
 .tab-content ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .tab-content li {
@@ -229,11 +236,11 @@ article:nth-child(4) {
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 .tab-content li img {
-    width: 100px; 
+    width: 100px;
     height: auto;
     margin-right: 10px;
 }
@@ -243,7 +250,7 @@ article:nth-child(4) {
     align-items: center;
     color: #999;
     font-size: 12px;
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 .tab-content .date {
