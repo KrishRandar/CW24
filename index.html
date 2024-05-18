@@ -44,7 +44,7 @@
     <span class="date">
         <i class="fa-solid fa-cloud-moon-rain"></i>&nbsp;
         <i class="fa-solid fa-calendar-days"></i>&nbsp;
-        May 18, 2024
+        <script> document.write(new Date().toLocaleDateString()); </script>
     </span>
 </div>
 <main>
@@ -56,8 +56,7 @@
             <button class="tab" onclick="showTab('popular')">Popular</button>
         </div>
         <div id="latest" class="tab-content active">
-            <ul id = "latarticle">
-
+            <ul id="latarticle" class="scroll-container">
             </ul>
         </div>
         <div id="popular" class="tab-content">
@@ -66,33 +65,34 @@
                     <img src="1.jpg" alt="Popular Image 1">
                     <div>
                         Popular article 1
-                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 20, 2022</span>
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbsp;October 20, 2022</span>
                     </div>
                 </li>
                 <li>
                     <img src="2.jpg" alt="Popular Image 2">
                     <div>
                         Popular article 2
-                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 19, 2022</span>
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbsp;October 19, 2022</span>
                     </div>
                 </li>
                 <li>
                     <img src="3.jpg" alt="Popular Image 3">
                     <div>
                         Popular article 3
-                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 18, 2022</span>
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbsp;October 18, 2022</span>
                     </div>
                 </li>
                 <li>
                     <img src="4.jpg" alt="Popular Image 4">
                     <div>
                         Popular article 4
-                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbspOctober 17, 2022</span>
+                        <span class="date"><i class="fa-regular fa-calendar"></i> &nbsp;October 17, 2022</span>
                     </div>
                 </li>
             </ul>
         </div>
-    </aside>    
+    </aside>
+    
 </main>
 
 <template id="featuredtemplate">
